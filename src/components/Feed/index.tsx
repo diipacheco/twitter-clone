@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 
 import Tweet from '../Tweet';
 
@@ -10,10 +10,9 @@ const Feed: React.FC = () => {
       <Tab>Tweets</Tab>
 
       <Tweets>
-        <Tweet />
-        <Tweet />
-        <Tweet />
-        <Tweet />
+        <Suspense fallback={<h1>loading...</h1>}>
+          <Tweet />
+        </Suspense>
       </Tweets>
     </Container>
   );

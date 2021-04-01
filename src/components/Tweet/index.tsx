@@ -2,6 +2,8 @@ import React from 'react';
 import { MdComment, MdFavorite } from 'react-icons/md';
 import { FaRetweet } from 'react-icons/fa';
 
+import fetchTweetsData from '../../utils/fetchTweetsData';
+
 import {
   Container,
   Retweeted,
@@ -16,47 +18,54 @@ import {
   Status,
 } from './styles';
 
+const tweetsResource = fetchTweetsData();
+
 const Tweet: React.FC = () => {
+  const tweets = tweetsResource.tweets.read();
   return (
-    <Container>
-      <Retweeted>
-        <FaRetweet size={16} />
-        Você retweetou
-      </Retweeted>
+    <>
+      {tweets?.map(tweet => (
+        <Container key={tweet.id}>
+          <Retweeted>
+            <FaRetweet size={16} />
+            Você retweetou
+          </Retweeted>
 
-      <Body>
-        <Avatar />
-        <Content>
-          <Header>
-            <strong>Rocketseat</strong>
-            <span>@rocketseat</span>
-            <Dot />
-            <time>27 de jun</time>
-          </Header>
+          <Body key={tweet.id}>
+            <Avatar avatarUrl={tweet.avatar_author_url} />
+            <Content key={tweet.id}>
+              <Header>
+                <strong>{tweet.author_name}</strong>
+                <span>{`@${tweet.author_nickname}`}</span>
+                <Dot />
+                <time>27 de jun</time>
+              </Header>
 
-          <Description>Teste</Description>
+              <Description>{tweet.content}</Description>
 
-          <ImageContent />
+              <ImageContent />
 
-          <Icons>
-            <Status>
-              <MdComment />
-              18
-            </Status>
+              <Icons>
+                <Status>
+                  <MdComment />
+                  18
+                </Status>
 
-            <Status>
-              <FaRetweet />
-              18K
-            </Status>
+                <Status>
+                  <FaRetweet />
+                  {tweet.retweets}
+                </Status>
 
-            <Status>
-              <MdFavorite />
-              999
-            </Status>
-          </Icons>
-        </Content>
-      </Body>
-    </Container>
+                <Status>
+                  <MdFavorite />
+                  {tweet.likes}
+                </Status>
+              </Icons>
+            </Content>
+          </Body>
+        </Container>
+      ))}
+    </>
   );
 };
 

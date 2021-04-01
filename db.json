@@ -1,0 +1,40 @@
+{
+  "tweets": [
+    {
+      "id": 1,
+      "avatar_author_url": "https://www.redspark.io/wp-content/uploads/2020/05/1200px-React-icon.svg_-1080x675.png",
+      "author_name": "React Brasil",
+      "author_nickname": "reactbrasil",
+      "content": "Morbi fermentum magna quis malesuada tempor. Pellentesque viverra lobortis urna vel luctus. In euismod justo diam, sit amet maximus turpis vulputate sit amet. Donec tortor nibh, semper ut aliquet vitae, rutrum quis justo. Nullam dapibus mauris eu magna pretium, sed ultrices odio efficitur. Fusce cursus elit id est fermentum faucibus. Nullam non tortor ante. Sed vel magna ut nibh pellentesque scelerisque ac vel justo. Morbi bibendum sodales tortor, eu sagittis turpis tristique et.",
+      "retweets": 10000,
+      "likes": 9999
+    },
+    {
+      "id": 2,
+      "avatar_author_url": "https://cdn.substack.com/image/fetch/w_1360,c_limit,f_auto,q_auto:best,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2Fed89fa3b-7a5c-44a0-86a8-e9cfd48458c1_349x349.png",
+      "author_name": "Brasil JS",
+      "author_nickname": "brasiljs",
+      "content": "Morbi fermentum magna quis malesuada tempor. Pellentesque viverra lobortis urna vel luctus. In euismod justo diam, sit amet maximus turpis vulputate sit amet. Donec tortor nibh, semper ut aliquet vitae, rutrum quis justo. Nullam dapibus mauris eu magna pretium, sed ultrices odio efficitur. Fusce cursus elit id est fermentum faucibus. Nullam non tortor ante. Sed vel magna ut nibh pellentesque scelerisque ac vel justo. Morbi bibendum sodales tortor, eu sagittis turpis tristique et.",
+      "retweets": 361,
+      "likes": 9999
+    },
+    {
+      "id": 3,
+      "avatar_author_url": "https://i.pinimg.com/564x/d4/91/c2/d491c232fc9c3debe18aca2a13d3ccbe.jpg",
+      "author_name": "Facebook Developers",
+      "author_nickname": "facebookdevelopers",
+      "content": "Morbi fermentum magna quis malesuada tempor. Pellentesque viverra lobortis urna vel luctus. In euismod justo diam, sit amet maximus turpis vulputate sit amet. Donec tortor nibh, semper ut aliquet vitae, rutrum quis justo. Nullam dapibus mauris eu magna pretium, sed ultrices odio efficitur. Fusce cursus elit id est fermentum faucibus. Nullam non tortor ante. Sed vel magna ut nibh pellentesque scelerisque ac vel justo. Morbi bibendum sodales tortor, eu sagittis turpis tristique et.",
+      "retweets": 123,
+      "likes": 786
+    },
+    {
+      "id": 4,
+      "avatar_author_url": "https://pbs.twimg.com/profile_images/1291682473592659968/sEorc6oh_400x400.jpg",
+      "author_name": "Rocketseat",
+      "author_nickname": "rocketseat",
+      "content": "Morbi fermentum magna quis malesuada tempor. Pellentesque viverra lobortis urna vel luctus. In euismod justo diam, sit amet maximus turpis vulputate sit amet. Donec tortor nibh, semper ut aliquet vitae, rutrum quis justo. Nullam dapibus mauris eu magna pretium, sed ultrices odio efficitur. Fusce cursus elit id est fermentum faucibus. Nullam non tortor ante. Sed vel magna ut nibh pellentesque scelerisque ac vel justo. Morbi bibendum sodales tortor, eu sagittis turpis tristique et.",
+      "retweets": 1000,
+      "likes": 566
+    }
+]
+}

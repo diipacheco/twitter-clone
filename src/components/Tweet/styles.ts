@@ -1,5 +1,9 @@
 import styled from 'styled-components';
 
+interface AvatarProps {
+  avatarUrl?: string;
+}
+
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
@@ -30,13 +34,16 @@ export const Body = styled.div`
 
   position: relative;
 `;
-export const Avatar = styled.div`
+export const Avatar = styled.div<AvatarProps>`
   width: 49px;
   height: 49px;
   flex-shrink: 0;
 
   border-radius: 50%;
-  background: var(--gray);
+  background-image: ${({ avatarUrl }) => `url(${avatarUrl})`};
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 
   position: absolute;
   top: 0;
