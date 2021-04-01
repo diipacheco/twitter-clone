@@ -5,6 +5,6 @@ export default {
     baseURL: 'http://api.github.com',
   }),
   tweets: axios.create({
-    baseURL: 'http://localhost:3333',
+    baseURL: 'http://my-json-server.typicode.com/diipacheco/twitter-clone-db/',
   }),
 };
