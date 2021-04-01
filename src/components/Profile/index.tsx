@@ -1,6 +1,8 @@
 import React from 'react';
 import { MdLocationOn, MdCake } from 'react-icons/md';
 
+import Feed from '../Feed';
+
 import {
   Container,
   Avatar,
@@ -52,6 +54,8 @@ const Profile: React.FC = () => {
           </span>
         </FollowAge>
       </ProfileData>
+
+      <Feed />
     </Container>
   );
 };
