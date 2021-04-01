@@ -7,7 +7,7 @@ const Header: React.FC = () => {
   return (
     <Container>
       <button type="button">
-        <MdArrowBack size={24} fill="#33A1F2" />
+        <MdArrowBack size={24} fill="var(--twitter)" />
       </button>
       <ProfileInfo>
         <strong>edilsu</strong>
