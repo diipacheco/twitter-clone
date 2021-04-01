@@ -107,7 +107,7 @@ export const BotSide = styled.div`
   align-items: center;
   margin-top: 20px;
 
-  > svg {
+  > button svg {
     display: none;
 
     @media (min-width: 1280px) {

@@ -11,20 +11,21 @@ import { Container, Content, FormTitle, InputContainer } from './styles';
 const Signin: React.FC = () => {
   const [nickNameInputValue, setNickNameInputValue] = useState('');
 
-  const { push } = useHistory();
+  const history = useHistory();
 
   const { signIn, authError } = useFakeAuth();
 
   const handleSubmit = useCallback(
-    (event: FormEvent) => {
+    async (event: FormEvent) => {
       event.preventDefault();
-      signIn({
+
+      await signIn({
         nickname: nickNameInputValue,
       });
 
-      push('/main');
+      history.push('/main');
     },
-    [signIn, nickNameInputValue, push],
+    [signIn, nickNameInputValue, history],
   );
 
   return (

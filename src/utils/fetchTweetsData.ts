@@ -1,7 +1,7 @@
 import Tweet from '../components/Tweet';
 import api from '../services/api';
 
-interface Tweet {
+export interface Tweet {
   id: number;
   avatar_author_url?: string;
   author_name: string;
@@ -12,7 +12,7 @@ interface Tweet {
 }
 
 async function fetchTweets(): Promise<Tweet[]> {
-  const response = await api.get<Tweet[]>('/tweets');
+  const response = await api.tweets.get<Tweet[]>('/tweets');
   return response.data;
 }
 
@@ -42,7 +42,13 @@ function wrapPromise(promise: Promise<Tweet[]>) {
   };
 }
 
-export default function fetchTweetsData() {
+interface FetchTweetsReturn {
+  tweets: {
+    read(): Tweet[] | undefined;
+  };
+}
+
+export default function fetchTweetsData(): FetchTweetsReturn {
   const postsPromise = fetchTweets();
   return {
     tweets: wrapPromise(postsPromise),

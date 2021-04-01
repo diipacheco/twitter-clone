@@ -23,7 +23,7 @@ import {
 import { useFakeAuth } from '../../hooks/fakeAuth';
 
 const MenuBar: React.FC = () => {
-  const { user } = useFakeAuth();
+  const { user, signOut } = useFakeAuth();
   return (
     <Container>
       <TopSide>
@@ -64,13 +64,15 @@ const MenuBar: React.FC = () => {
       </TopSide>
 
       <BotSide>
-        <Avatar avatarUserUrl={user.avatar_url} />
+        <Avatar avatarUserUrl={user.avatar_url} data-testid="profile-avatar" />
         <ProfileData>
           <strong>{user.name}</strong>
           <span>{user.login}</span>
         </ProfileData>
 
-        <MdExitToApp size={30} />
+        <button type="button" data-testid="singout-button" onClick={signOut}>
+          <MdExitToApp size={30} />
+        </button>
       </BotSide>
     </Container>
   );
