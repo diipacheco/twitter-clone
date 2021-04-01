@@ -1,7 +1,14 @@
 import React from 'react';
 import { MdLocationOn, MdCake } from 'react-icons/md';
 
-import { Container, Avatar, Banner, FollowAge, ProfileData } from './styles';
+import {
+  Container,
+  Avatar,
+  Banner,
+  FollowAge,
+  ProfileData,
+  EditButton,
+} from './styles';
 
 const Profile: React.FC = () => {
   return (
@@ -11,7 +18,7 @@ const Profile: React.FC = () => {
       </Banner>
 
       <ProfileData>
-        {/* <EditButton outlined>Editar perfil</EditButton> */}
+        <EditButton outlined>Editar perfil</EditButton>
 
         <h1>Edilson Pacheco</h1>
         <h2>@diipacheco__</h2>
