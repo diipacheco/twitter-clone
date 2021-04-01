@@ -18,6 +18,8 @@ interface GitHubUser {
   avatar_url: string;
   followers: number;
   following: number;
+  bio?: string;
+  location?: string;
 }
 
 interface AuthContextData {

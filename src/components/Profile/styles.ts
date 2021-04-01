@@ -1,5 +1,9 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import Button from '../Button';
+
+interface AvatarProps {
+  avatarUserUrl?: string;
+}
 
 export const Container = styled.div`
   display: flex;
@@ -21,12 +25,15 @@ export const Banner = styled.div`
   height: min(33vw, 199px);
   background: var(--twitter);
 `;
-export const Avatar = styled.div`
+export const Avatar = styled.div<AvatarProps>`
   width: max(45px, min(135px, 22vw));
   height: max(45px, min(135px, 22vw));
 
   border: 3.75px solid var(--primary);
-  background: var(--gray);
+  background-image: ${({ avatarUserUrl }) => `url(${avatarUserUrl})`};
+  background-repeat: no-repeat;
+  background-size: cover;
+
   border-radius: 50%;
 
   position: absolute;

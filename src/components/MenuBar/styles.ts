@@ -1,5 +1,9 @@
 import styled from 'styled-components';
 
+interface AvatarProps {
+  avatarUserUrl?: string;
+}
+
 export const Container = styled.div`
   display: none;
 
@@ -119,14 +123,16 @@ export const BotSide = styled.div`
   }
 `;
 
-export const Avatar = styled.div`
+export const Avatar = styled.div<AvatarProps>`
   width: 39px;
   height: 39px;
+  background-image: ${({ avatarUserUrl }) => `url(${avatarUserUrl})`};
+  background-size: cover;
+  background-repeat: no-repeat;
 
   flex-shrink: 0;
 
   border-radius: 50%;
-  background: var(--gray);
 `;
 
 export const ProfileData = styled.div`

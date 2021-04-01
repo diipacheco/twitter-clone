@@ -20,8 +20,10 @@ import {
   Avatar,
   ProfileData,
 } from './styles';
+import { useFakeAuth } from '../../hooks/fakeAuth';
 
 const MenuBar: React.FC = () => {
+  const { user } = useFakeAuth();
   return (
     <Container>
       <TopSide>
@@ -62,10 +64,10 @@ const MenuBar: React.FC = () => {
       </TopSide>
 
       <BotSide>
-        <Avatar />
+        <Avatar avatarUserUrl={user.avatar_url} />
         <ProfileData>
-          <strong>Edilson Pacheco</strong>
-          <span>@diipacheco__</span>
+          <strong>{user.name}</strong>
+          <span>{user.login}</span>
         </ProfileData>
 
         <MdExitToApp size={30} />
