@@ -11,7 +11,6 @@ const Main: React.FC = () => {
     <Container>
       <Header />
       <Profile />
-
       <BottomMenu />
     </Container>
   );

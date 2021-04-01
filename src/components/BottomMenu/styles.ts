@@ -15,7 +15,7 @@ export default styled.div`
   background: var(--primary);
   border-top: 1px solid var(--outline);
 
-  @media (min-with: 500px) {
+  @media (min-width: 500px) {
     display: none;
   }
 
