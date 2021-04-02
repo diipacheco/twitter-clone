@@ -49,8 +49,8 @@ interface FetchTweetsReturn {
 }
 
 export default function fetchTweetsData(): FetchTweetsReturn {
-  const postsPromise = fetchTweets();
+  const tweetsPromise = fetchTweets();
   return {
-    tweets: wrapPromise(postsPromise),
+    tweets: wrapPromise(tweetsPromise),
   };
 }
